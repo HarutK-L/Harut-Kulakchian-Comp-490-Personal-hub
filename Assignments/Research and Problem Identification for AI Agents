@@ -1,0 +1,43 @@
+Harut Kulakchian
+Comp 490
+09/16/25
+Research and Problem Identification for AI Agents
+1) AI agents are developed software programs that act by themselves to complete tasks
+given by analyzing the environment, using logical reasoning, and taking action using the given
+tools and data. A reflex agent is the standard type of AI agent, they operate based on a
+condition-action rule, which means they take action directly based on the current input without
+considering past or future experiences. An example of this would be a motion sensor light or an
+automatic door. A model-based reflex agent uses their current perception and past events to
+maintain an internal model of the world and as the AI receives new data it will record it and
+update their internal world model. An example would be self driving cars or a smart home
+security system. A goal based agent will perform actions to achieve a defined objective. They
+evaluate their possible actions to find one that helps them efficiently complete their goal. An
+example would be a GPS system giving you the fastest route. An utility-based agent selects the
+order of actions that reach a goal and also prioritizes utility or reward. An example would be a
+GPS system giving you a route based on traffic, tolls and gas. Learning agents improve their
+performance over time by experiencing and learning from tasks over time. An example would be
+a chess bot that learns and get better at chess by playing games over time.
+2) After researching the tools used to build AI I I came to the conclusion that Langchain
+the python library would be very useful for building our project. LangChain is an open-source
+framework for developing applications powered by large language models. For our fitness
+tracker game app we would need to give something to make it stand out and seem interesting. So
+langchian would be useful because it provides tools and components to connect LLMs with
+external data sources which means we would be able to build complex, multi-step applications
+within our program like an intelligent time management bot or automated analysis tools.
+3) A problem I feel our app will come across will be motivation and use of the app. A lot
+of people don’t have the motivation or drive to keep a consistent exercise schedule. If we were to
+include something like a utility-based AI agent we could have the AI help manage the schedule
+and questions of the user. For example the user can set a fitness goal and the AI would be able to
+give the workout schedule needed to achieve the goal. Or if the user has questions the AI could
+tell them things such as what exercises to do to train certain body parts or proper form and speed
+when doing the exercises.
+4) The goal for our AI agent would be for it to provide a welcoming and fun environment
+for people to keep using the app and sticking to a consistent exercise schedule. The AI must have
+good knowledge on fitness and the human body. It should know the average time for a certain
+amount to lose weight and also consider that different people's bodies will have different
+reactions to the exercises. We will measure its effectiveness by testing all its knowledge and
+expertise in fitness until it reaches a satisfactory point.
+5) Originally I didn't know if we should include AI into our program. But after going
+through the research I’ve learned about the different types of AI agents and how to build them
+into a program. So now I do believe we would be able to incorporate AI to improve our
+application.
