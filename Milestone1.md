@@ -9,7 +9,7 @@ Daniel Herrera      daniel.herrera.842@my.csun.edu
 Harut Kulakchian  harut.kulakchian.037@my.csun.edu
 
 2-
-Before or After Class Tuesday/Thursday 
+Before or After Class Tuesday/Thursday  
 
 3-
 Chat Service-
