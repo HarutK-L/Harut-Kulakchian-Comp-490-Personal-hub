@@ -1,0 +1,248 @@
+﻿Module, UI Design & AI Integration
+
+
+Part 1: Module Design
+1. User/Authentication Module
+Responsibilities
+* Register new user
+* Login user
+* Store user profile information
+Database Collections
+* Users
+(Explanation
+This module handles user accounts. When someone creates an account or logs into the app this module checks their information and connects it to the database.(MongoDB))
+
+
+2. Workout Module
+Responsibilities
+* Log workouts
+* Keeps track of exercises, reps, and weights
+* Calculate XP from workouts
+* Update character stats
+Database Collections
+* Workouts
+* Characters Updated Info
+* Users
+(Explanation
+This module handles the workout logs. When a user logs a workout the system saves the exercise information like reps or weights used. Then it is used to give XP to the character.)
+
+
+3. Hydration Module
+Responsibilities
+* Track water intake
+* Shows hydration progress
+Database Collections
+* WaterLogs
+* Users
+(Explanation
+This module tracks how much water they drink during the day. The Database (MongoDB) saves that information and shows their progress when checked.)
+
+
+4. Battle/Game Module
+Responsibilities
+* Start battles
+* Track battle results
+* Reward XP and gold
+Database Collections
+* Battles
+* Characters
+* Users
+(Explanation
+This module controls the game part of the app. Users can enter battles and use their character to fight enemies. The characters level and strength comes from the workouts the user will log so the more active the user is, the stronger their character becomes.)
+
+
+5. Dashboard Module
+Responsibilities
+* Show workout progress
+* Show hydration progress
+* Display character level and stats
+* Display recent activity
+Database Collections
+* Workouts
+* WaterLogs
+* Characters
+* Users
+(Explanation
+The dashboard is basically the main screen people will see. It shows a quick summary of the users activity like workouts, hydration progress and character stats.)
+
+
+6. AI Recommendation Module
+Responsibilities
+* Analyzes workout history
+* Suggest recommended workouts
+* Suggest water intake amount
+Database Collections
+* Workouts
+* WaterLogs
+* Characters
+(Explanation
+This module uses AI to help users decide what workout they should do next. Looking at the persons previous workouts and activity history and suggests certain exercises that could help them improve as well as water intake for them).
+
+
+
+
+
+
+
+
+Part 2: UI Design
+
+
+1. Login Screen
+Components
+* Email input
+* Password input
+* Login button
+* Register link
+(Explanation
+This allows the user to log into their account so they can access their workout data and character progress.)
+
+
+
+
+2. Dashboard Screen
+Components
+* Character level display
+* XP progress bar
+* Workout summary
+* Hydration progress
+* Navigation menu
+(Explanation
+The dashboard shows the user their activity. It displays things like their level, workout progress and hydration status. This screen helps the user see how they are doing.)
+
+
+3. Log Workout Screen
+Components
+* Exercise input
+* Body part selection
+* Reps input
+* Weight input
+* Submit button
+(Explanation
+This screen shows the user to enter details about the workout they completed. The information is inputted and the system records it and updates the users character progress.)
+        
+4. Water Tracker Screen
+Components
+* Water intake input
+* Submit button
+* Hydration progress display
+(Explanation
+This shows how much water the user drinks. The system tracks the amount and shows progress toward a daily hydration goal they have.)
+
+
+5. Battle Screen
+Components
+* Enemy display
+* Player health bar
+* Enemy health bar
+* Attack button
+* Battle result message
+(Explanation
+This screen is where the RPG gameplay happens. The user can battle enemies using their character.)
+
+
+6. Character Profile Screen
+Components
+* Character stats
+* Level information
+* Progress history
+(Explanation
+This screen shows the users character and their stats. It helps the user see how their real life workouts are improving their characters abilities.)
+
+
+Part 3: Navigation Flow
+
+
+Login
+> Dashboard > Log Workout > Update Stats > Dashboard
+
+
+Login
+> Dashboard > Water Tracker > Update Hydration > Dashboard
+
+
+Login
+> Dashboard > Battle > Reward Screen > Dashboard
+  
+
+(Explanation
+This flow chart shows how users move between screens in the app. A user will log in, check their dashboard, record a workout and then return to the dashboard to see their updated progress.)
+
+
+Part 4: AI Integration
+Feature Name:
+* Workout Recommendation System
+Problem it solves:
+* Many users do not know what workout they should do next so the AI helps guide users by recommending exercises based on what body part they want to focus.
+Input (data used):
+* Workout history
+* Body parts trained
+* Hydration history
+* Character stats
+Output (result generated):
+* Suggested workout
+* Recommended exercise
+Where it appears in UI:
+* Dashboard screen
+Which module it belongs to:
+* Workout Module
+
+
+(Explanation
+The AI helps users choose their next workout. By looking at their workout history and activity, the system can suggest exercises that would make sense for them to do next. This helps the users feel like they are not lost.)
+
+
+Part 5: System Mapping
+Login Screen
+> POST /auth/login > Users collection
+
+
+Register Screen
+> POST /auth/register > Users collection
+
+
+Log Workout Screen
+> POST /workout > Workouts collection
+
+
+Water Tracker Screen
+> POST /water > WaterLogs collection
+
+
+Battle Screen
+> POST /battle/start > Battles collection
+
+
+Dashboard Screen
+> GET /dashboard > Workouts + WaterLogs + Characters collections
+  
+
+(Explanation
+This section explains how the different parts of the system communicate with each other. When a user performs an action on the app, like logging there workout, the interface sends a request to the systems API. The API then stores the information in the database which is MongoDB.
+
+
+Part 6: Existing System Analysis
+
+
+Application:
+* MyFitnessPal
+Key Features:
+* Tracks workouts
+* Tracks calories and nutrition
+* Tracks water intake
+* Displays progress charts
+Limitations:
+* No RPG game features
+* No character progression system
+* No battle mechanics
+* No AI workout suggestions
+Comparison with Our System:
+* Our system combines fitness with game RPG features. Instead of only tracking workouts users can level up characters and participate in raid battles. Our system is more engaging because it combines fitness tracking with a game system. Instead of only recording workouts and users are rewarded with character progression. This makes the person feel like they are getting something out of their workouts.
+New features introduced:
+* The main new features are RPG character progression, battle mechanics and AI workout suggestions. These features help users with workouts and also keep them motivated and make the fitness experience more fun.
+Why our system is more modern:
+* Our system combines fitness with game RPG features and AI recommendations in one application. This makes the app feel more interactive and fun.
+
+
+(Explanation
+I looked at MyFitnessPal as an example of an existing fitness tracking app. It tracks workouts and nutrition but it does not include any game features. Our system is different because it combines fitness with a RPG system that will keep users active and have fun.)
